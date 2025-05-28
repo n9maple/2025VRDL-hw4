@@ -56,7 +56,12 @@ data
 conda activate hw3
 ```
 
-2. Run the training code with the argumentation.
+2. run preprocess.py and put "rainTrain.txt" under "data_dir/rainy" folder
+```bash
+python preprocess.py
+```
+
+3. Run the training code with the argumentation.
 ```bash
 python train.py --de_type derain
 ```
@@ -66,7 +71,7 @@ except for "de_type", you don't need to add other arguments to run train.py, but
 python train.py -h
 ```
 
-3. Run the inference code. Before run the inference code, you need to name it "model.ckpt" and put it in "ckpt" folder. If you don't want to train your own model, you may download the weight from the link: 
+4. Run the inference code. Before run the inference code, you need to name it "model.ckpt" and put it in "ckpt" folder. If you don't want to train your own model, you may download the weight from the link: 
 [https://drive.google.com/file/d/1P-wU7MCYpKjBbAW4XbgRnsw7MUNVUXgs/view?usp=sharing](https://drive.google.com/file/d/1P-wU7MCYpKjBbAW4XbgRnsw7MUNVUXgs/view?usp=sharing)
 
 ```bash
@@ -75,7 +80,7 @@ python demo.py
 
 The prediction results will be saved in "output" folder.
 
-4. You may run img2npz.py to convert your image to numpy file:
+5. You may run img2npz.py to convert your image to numpy file:
 ```bash
 python img2npz.py
 ```
